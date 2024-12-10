@@ -21,3 +21,5 @@ def ordenacao_por_selecao(arr):
   return novo_arr
 
 print(ordenacao_por_selecao([5, 3, 6, 2, 10]))
+
+
