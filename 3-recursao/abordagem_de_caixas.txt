@@ -1,0 +1,34 @@
+1 Faça um monte com as caixas que serão analisadas
+2 enquanto ainda houver caixas no monte
+3 pegue uma caixa
+4 se você encontrar uma outra caixa dentro dela, adicione-a a um novo monte para ser analisada mais tarde
+5 se você encontrar uma chave, terminou!
+6 volte ao monte de caixas
+
+SEGUNDA ABORDAGEM
+
+1 Olhe o que tem dentro da caixa
+2 Se encontrar outra caixa, volte ao passo 1
+3 Se encontrar a chave, terminou
+
+
+Pseudo codigo da primeira maneira
+
+def procure_pela_caixa(caixa_principal):
+  pilha = main_box.crie_uma_pilha_para_busca()
+  while pilha is not vazia:
+    caixa = pilha.pegue_caixa()
+    for item in caixa:
+      if item.e_uma_caixa():
+        pilha.append(item)
+      elif item.e_uma_chave():
+        print('Achei a chave!')
+
+Pseudo codigo da segunda maneira
+
+def procure_pela_chave(caixa):
+  for item in caixa:
+    if item.e_uma_caixa()
+      procure_pela_chave(item)
+    elif item.e_uma_chave():
+      print('achei a chave!')
