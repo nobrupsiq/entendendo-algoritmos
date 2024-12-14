@@ -1,0 +1,6 @@
+DIVIDIR PARA CONQUISTAS (DC)
+
+Para resolver um problema utilizando DC, você deve seguir dois passos:
+1 - Descubra o caso-base, que deve ser o caso mais simples possível.
+2 - Divida ou diminua o seu problema até que ele se torne o caso-base.
+
