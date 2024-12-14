@@ -17,14 +17,23 @@
   
 # print(total_items(lista2))
 # 4.3 Encontre o valor mais alto em uma lista.
-lista3 = [5, 23, 12, 54, 34, 19, 77, 34, 22, 67]
+# lista3 = [5, 23, 12, 54, 34, 19, 77, 34, 22, 67]
 
-def valor_mais_alto(lista):
-  if len(lista) == 1: 
-    return lista[0]
-  else:
-    maior_do_resto = valor_mais_alto(lista[1:])
-    return lista[0] if lista[0] > maior_do_resto else maior_do_resto # Está dizendo assim, retorne o valor 5 se o valor 5 for maior que o numero 23, se nao retorne o 23 mesmo
+# def valor_mais_alto(lista):
+#   if len(lista) == 1: 
+#     return lista[0]
+#   else:
+#     maior_do_resto = valor_mais_alto(lista[1:])
+#     return lista[0] if lista[0] > maior_do_resto else maior_do_resto # Está dizendo assim, retorne o valor 5 se o valor 5 for maior que o numero 23, se nao retorne o 23 mesmo
       
-print(valor_mais_alto(lista3))
+# print(valor_mais_alto(lista3))
 # 4.4 Você se lembra da pesquisa binária do capitulo 1? Ela também é um algoritmo do tipo dividir para conquistar. Você consegue determinar o caso-base e o caso recursivo para a pesquisa binária?
+def pesquisa_binaria(lista, alvo):
+  baixo = 0
+  alto = len(lista) -1
+
+  if lista[alvo]:
+    return 0
+  meio = (baixo + alto) / 2 
+  
+  
