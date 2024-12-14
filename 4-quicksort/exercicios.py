@@ -28,12 +28,20 @@
       
 # print(valor_mais_alto(lista3))
 # 4.4 Você se lembra da pesquisa binária do capitulo 1? Ela também é um algoritmo do tipo dividir para conquistar. Você consegue determinar o caso-base e o caso recursivo para a pesquisa binária?
-def pesquisa_binaria(lista, alvo):
-  baixo = 0
-  alto = len(lista) -1
+def busca_binaria_recursiva(lista, elemento, inicio, fim):
+  # Caso base
+  if inicio > fim:
+    return -1 # Quer dizer que o elemento não foi encontrado
 
-  if lista[alvo]:
-    return 0
-  meio = (baixo + alto) / 2 
+  meio = (inicio + fim) // 2 # Seta o meio da lista
+
+  if lista[meio] == elemento: # Se o meio da minha lista for o alvo que estou procurando
+    return meio # irá retornar o numero do meio
   
+  elif elemento < lista[meio]:
+    # Caso recursivo, se o elemento for menor que o meio da lista, elimina o restante da direita e busca na medate da esquerda
+    return busca_binaria_recursiva(lista, elemento, inicio, meio -1)  
   
+  else:
+    #Caso recursivo, se o elemento nao for menor e sim maior, vai buscar da metade para a direita
+    return busca_binaria_recursiva(lista, elemento, inicio, meio +1)
