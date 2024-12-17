@@ -7,18 +7,18 @@
 '''
 
 def quicksort(array):
-  if len(array) < 2:
+  if len(array) < 2: # O(1)
     return array
 
   pivo = array[0]
 
-  menores = [i for i in array[1:] if i <= pivo] # Jeito elegante de fazer um looping
-  maiores = [i for i in array[1:] if i > pivo]
+  menores = [i for i in array[1:] if i <= pivo] # Jeito elegante de fazer um looping O(N)
+  maiores = [i for i in array[1:] if i > pivo] # O(N)
   
   return quicksort(menores) + [pivo] + quicksort(maiores)
 
 print(quicksort([3, 5, 2, 1, 4]))
-
+# 0(1) + O(N) + O(N) = 2O(N) = O(N)
 """
 EXPLICAÇÃO PASSO A PASSO NA CHAMADA RECURSIVA
 
