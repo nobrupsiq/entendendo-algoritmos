@@ -18,7 +18,11 @@ def quicksort(array):
   return quicksort(menores) + [pivo] + quicksort(maiores)
 
 print(quicksort([3, 5, 2, 1, 4]))
-# 0(1) + O(N) + O(N) = 2O(N) = O(N)
+# 0(1) + O(N) * O(N) = 2O(N) = O(N²)
+"""
+Melhor caso: O(N) * O(log n) = O(n log n) obs o melhor caso também é o caso médio, EX: Se eu escolher um elemento aletório do array como pivô.
+Pior caso: O(n) * O(n) = O(n²)
+"""
 """
 EXPLICAÇÃO PASSO A PASSO NA CHAMADA RECURSIVA
 
