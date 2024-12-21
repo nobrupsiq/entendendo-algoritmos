@@ -29,3 +29,25 @@ lista_telefonica['jenny'] = 8675309
 lista_telefonica['emergency'] = 911 
 
 print(lista_telefonica['jenny'])
+
+websites = {}
+websites['google.com'] = 74.125
+websites['facebook.com'] = 21231
+websites['scribd.com'] = 23123
+
+print(websites['scribd.com'])
+
+voted = {}
+def verificar_eleitor(nome):
+  if voted.get(nome):
+    print('Mande embora!')
+  else:
+    voted[nome] = True
+    print('Deixe votar!')
+
+verificar_eleitor('tom')
+verificar_eleitor('mike')
+verificar_eleitor('mike')
+verificar_eleitor('tom')
+
+print(voted)
